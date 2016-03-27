@@ -24,7 +24,7 @@
 #include <linux/moduleparam.h>
 #include <linux/rwsem.h>
 #include <linux/sched.h>
-// #include <linux/sched/rt.h>
+#include <linux/sched/rt.h>
 #include <linux/tick.h>
 #include <linux/time.h>
 #include <linux/timer.h>
@@ -73,7 +73,7 @@ static struct mutex gov_lock;
 static unsigned int hispeed_freq;
 
 /* Go to hi speed when CPU load at or above this value. */
-#define DEFAULT_GO_HISPEED_LOAD 90
+#define DEFAULT_GO_HISPEED_LOAD 99
 static unsigned long go_hispeed_load = DEFAULT_GO_HISPEED_LOAD;
 
 /*
